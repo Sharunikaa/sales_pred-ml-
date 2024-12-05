@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <style>
+        body {
+            background: url('https://media.istockphoto.com/id/1379132011/photo/global-inflation-rate-2022-problem-stockmarket-and-risk-asset-stockmarket-crash.webp?b=1&s=170667a&w=0&k=20&c=IVwEESR6OG2WHXMEfhHWhlZZ1e-_u28Qj0_MPS8BnHk=') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh; /* 100% of viewport height */
+            display: flex;
+            align-items: center; /* Vertical alignment */
+            justify-content: center; /* Horizontal alignment */
+        }
+        
+        .container {
+            padding: 50px; /* Increased padding for the container */
+            width: 80%; /* Increased width of the container */
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px; /* Increased border radius for rounded corners */
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Increased gap between option boxes */
+        }
+        
+        .option a {
+            display: inline-block;
+            padding: 20px 40px; /* Increased padding for option boxes */
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px; /* Increased border radius for rounded corners */
+            transition: background-color 0.3s ease;
+            font-size: 1.2em; /* Increased font size for option text */
+        }
+        
+        .option a:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px; /* Adjusted padding for smaller screens */
+            }
+        
+            h1 {
+                font-size: 2em;
+            }
+        
+            .options {
+                gap: 20px; /* Adjusted gap for smaller screens */
+            }
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SALES PREDICTION</h1><br><br>
+        <div class="options">
+            <div class="option">
+                <a href="{{ url_for('predicted_sales_graph') }}">Predicted Sales Graph</a>
+            </div>
+            <div class="option">
+                <a href="{{ url_for('predict_future_sales') }}">Predict Future Sales</a>
+            </div>
+            <div class="option">
+                <a href="{{ url_for('customer_segmentation') }}">Customer Segmentation</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
